@@ -1,0 +1,250 @@
+/*Général*/
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+   
+}
+
+body {
+    background-color: lightgray;
+
+}
+
+
+
+#logo {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+
+/*Main part*/
+
+
+
+section {
+    margin-bottom: 3rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+
+    color: #37393c;
+    text-align: center;
+    height: auto;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.content h2 {
+    font-size: 2rem;
+    margin: 0.75rem auto;
+    font-family: 'Oswald', sans-serif;
+}
+
+.content h4 {
+    font-size: 1.25rem;
+}
+
+/*Mission*/
+
+header {
+    background-image: url("./images/banner.avif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 500px;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+}
+
+header h2 {
+    max-width: 800px;
+    margin: 60px;
+    text-align:left;
+    color: white;
+}
+
+
+/* Navigation */
+
+nav {
+    height: 80px;
+    position: fixed;    
+    width: 100%;
+    color: #FBFBFC;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #282B37; 
+    background-color: #e20025;
+    padding:10px;
+}
+
+img.logo {
+    height: 30px;
+    margin: 10px 0;
+    margin-left: 30px;
+}
+
+nav .links {
+    margin: 0 30px;
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    margin: 15px;
+    color:white;
+}
+
+nav button {
+    background-color: white;
+    color: #e20025;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+.burgermenu {
+    margin: auto;
+    margin-left: 10px;
+    display: none;    
+}
+
+.burgermenu img {
+    height: 30px;
+    width: 40px;
+    padding: 10px 5px;
+}
+
+@media only screen and (max-width: 768px) {
+    .links a {
+        display: none;
+    }
+
+    nav .burgermenu {
+        display: inline-block;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    nav button {
+        display: none;
+    }
+
+}
+
+/*Fonctionnalités*/
+#fonctionnalités {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: 100px auto;
+
+}
+
+
+#fonctionnalités img {
+    width: 100%;
+    max-height: auto;
+    object-fit: cover;
+}
+
+.fonction_item {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 0
+}
+
+.fonction h3 {
+    margin: 1rem auto;
+}
+
+.fonction p {
+    text-align: center;
+}
+
+
+.fonction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.fonction:last-child {
+    margin-right: 0;
+    /* Supprimer la marge pour le dernier élément */
+}
+
+.fonction img {
+
+    height: 100px;
+}
+
+@media only screen and (max-width:450px) {
+
+    .fonction_item {
+        display: flex;
+        flex-direction: column;
+        margin: 1rem 0
+    }
+
+    .fonction {
+        margin-bottom: 1rem;
+    }
+
+    #mission img {
+        width: 100%;
+    }
+}
+
+/*Adminsitrateurs*/
+
+#administrateurs {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr;
+}
+
+#administrateurs .contact_item {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "contact1" "contact2";
+    gap: 10px;
+    justify-self: center
+}
+
+.contact {
+    padding: 1rem;
+    text-align: center;
+}
+
+@media only screen and (max-width:450px) {
+    #administrateurs .contact_item {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        grid-template-areas: "contact1"
+            "contact2";
+        gap: 10px;
+        justify-self: center
+    }
+}
