@@ -1,98 +1,112 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>NUMECA</title>
-    <meta charset="utf-8">
-    <link href="./ressources/styles.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="./resources/favicon.ico" type="image/x-icon">   
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style></style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page avec section rouge</title>
+    <link rel="stylesheet" href="./ressources/styles.css">
+    <script src="./script.js" defer></script>
 </head>
 
 <body>
 
-
     <nav>
-        <div id="logo">
-            NUMECA
-        </div>
-        <div class="links">
-            <a href="#banner">Mission</a>
-            <a href="#fonctionnalités">Fonctionnalités</a>
-            <a href="#administrateurs">Administrateurs</a>
-            <button type="button">Nous contacter</button>
-            <div class="burgermenu"><img src="./ressources/images/menu.png"></div>
-          </div>
-       
-    </nav>
-
-
-
-
-    <!-- Mission -->
-    <header>
-
-
-
         <div class="content">
-            <h2>Développez un système collaboratif centralisant l’ensemble des informations liées à la maintenance
-                de notre parc matériel</h2>
-
+            <div id="logo">NUMECA</div>
+            <ul>
+                <li><a href="#features">Foncitonnalités</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-
-    </header>
-
-        <!-- Fonctionnalités -->
-
-        <section id="fonctionnalités">
-            <div class="content">
-                <h2>Fonctionnalités</h2>
-                <h4>Améliorer la maintenance du parc matériel en optimisant la productivité des collaborateurs</h4>
-            </div>
-            <div class="fonction_item">
-                <div class="fonction">
-                    <img src="./ressources/images/mécanicien.jpg">
-                    <h3>Rapport mécaniques</h3>
-                    <p>Création automatique d’un carnet de maintenance</p>
+    </nav>
+    <div id="container">
+        <main>
+            <section id="presentation">
+                <div class="content">
+                    <div class="description">
+                        <h1 id="title">Nouvelle version</h1>
+                        <p>Préparez-vous à être époustouflé par notre dernière version de l'application de maintenance
+                            du
+                            matériel, maintenant plus intuitive et puissante que jamais!</p>
+                    </div>
+                    <form id="myDIV">
+                        <p>Demander une démonstration</p>
+                        <div class="form_line"><label for="name">Nom</label><input type="text" id="name" name="name">
+                        </div>
+                        <div class="form_line"><label for="mail">Mail</label><input type="text" id="mail" name="mail">
+                        </div>
+                        <div class="form_line"><label for="function">Fonction</label><input type="text" id="function"
+                                name="function"></div>
+                        <input id="submit" type="submit" value="Demander une démonstration">
+                    </form>
                 </div>
-                <div class="fonction">
-                    <img src="./ressources/images/externe.jpg">
-                    <h3>Interventions externes</h3>
-                    <p>Centralisation des réparations internes et externes (VGP , SST,...)</p>
+            </section>
+            <section id="banner">
+                <div class="content">
+                    <img src="ressources/images/Capture-portrait.png">
+                    <div class="description">
+                        <h2>Gérer facilement la maintenance de votre parc matériel</h2>
+                        <p>Découvrez notre toute nouvelle application mobile révolutionnaire conçue pour simplifier la
+                            gestion
+                            de la maintenance de votre équipement. Avec une interface intuitive et conviviale, notre
+                            application
+                            vous permet de suivre facilement l'état de vos machines, de planifier des interventions
+                            préventives
+                            et de gérer les réparations nécessaires en temps réel.</p><p> Ne laissez plus la maintenance de
+                            votre
+                            matériel vous ralentir, téléchargez notre application dès aujourd'hui et optimisez
+                            l'efficacité
+                            de
+                            votre entreprise!
+                        </p>
+                    </div>
                 </div>
-                <div class="fonction">
-                    <img src="./ressources/images/suivi.jpg">
-                    <h3>Suivi des entretiens</h3>
-                    <p>Améliorer la maintenance préventive en anticipant les interventions</p>
-                </div>
-            </div>
-        </section>
+            </section>
+            <section id="features">
+                <div class="content">
+                    <h2>Fonctionnalités</h2>
 
-
-        <!-- Banniere -->
-
-        <section id="administrateurs">
-            <div class="content">
-                <h2>Administrateurs</h2>
-                <h4>Contactez les pour obtenir plus d'informations</h4>
-            </div>
-            <div class="contact_item">
-                <div class="contact contact1">
-                    <h2>Rémi FERRIERE</h2>
-                    <p>Ingénieur transistion numérique</p>
+                    <div id="items">
+                        <div class="item" id="rapports">
+                            <div class="text">
+                                <h3>
+                                    Génération de rapports
+                                </h3>
+                                <p>Enregistrer les interventions de vos équipes</p>
+                            </div>
+                        </div>
+                        <div class="item" id="carnet">
+                            <div class="text">
+                                <h3>
+                                    Carnet de maintenance
+                                </h3>
+                                <p>Consigner toutes les réparations effectuées sur le matériel</p>
+                            </div>
+                        </div>
+                        <div class="item" id="suivi">
+                            <div class="text">
+                                <h3>
+                                    Analyse des données
+                                </h3>
+                                <p>Pilotez efficacement votre parc matériel</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="contact contact2">
-                    <h2>Christophe LELARD</h2>
-                    <p>Responsable méthodes et développement</p>
-                </div>
-            </div>
-        </section>
+            </section>
+        </main>
         <footer>
-            <p>NUMECA | Photos issues de <a href="https://unsplash.com/">unsplash.com</a></p>
-          </footer>
+            <div class="content">
+                <h2>NUMECA</h2>
+                <div id="contact">
+                    <h3>Contact</h3>
+                    <p>Monsieur PATATE</p>
+                    <p>04 05 06 07 08</p>
+                </div>
+            </div>
+        </footer>
+    </div>
 </body>
 
 </html>
