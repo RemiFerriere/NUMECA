@@ -55,6 +55,7 @@ nav {
     z-index: 1;
     display: block;
     align-content: center;
+    border-bottom: 1px solid #e20025
 }
 
 nav .content {
@@ -76,12 +77,13 @@ li {
 }
 
 a {
-
+border-radius: 10px;
     color: #e20025;
-
+    text-decoration: none;
     font-size: 1.2rem;
     padding: 10px;
     font-weight: bold;
+    transition: 0.25s ease;
 }
 
 nav #logo {
@@ -145,6 +147,12 @@ input {
     background-color: aliceblue;
     padding-left: 10px;
     font-weight: 1.2rem;
+}
+
+a:hover {
+    background-color: #e22025;
+    border-radius: 10px;
+    color: white;
 }
 
 form p {
@@ -250,7 +258,10 @@ footer {
 
 }
 
-footer h2{color:white;}
+footer h2 {
+    color: white;
+}
+
 footer h3 {
     font-size: 1.2rem;
     padding-bottom: 0.5rem;
@@ -267,22 +278,26 @@ footer .content {
     align-items: start;
     color: white;
 }
-#formresponse{
+
+#formresponse {
     background-color: white;
     border-radius: 10px;
-    padding:40px;
-    font-size: 0.75rem;text-align: center;display:none
+    padding: 40px;
+    font-size: 0.75rem;
+    text-align: center;
+    display: none
 }
 
 @media only screen and (max-width:468px) {
 
     #banner .content,
     #items,
-    #presentation .content,footer .content  {
+    #presentation .content,
+    footer .content {
         display: flex;
         flex-direction: column;
         gap: 20px;
-        
+
         justify-content: center;
     }
 
@@ -294,11 +309,18 @@ footer .content {
         width: 100%;
         max-width: 100%;
         padding: 30px;
-        
+
 
     }
-    footer{padding-bottom: 60px;}
-form{width:100%}
+
+    footer {
+        padding-bottom: 60px;
+    }
+
+    form {
+        width: 100%
+    }
+
     nav ul {
         display: none;
     }
@@ -308,7 +330,12 @@ form{width:100%}
     }
 
     #submit {
-       
-        font-size: 1rem;}
-        #banner .content img {width:80%;height: auto;}
+
+        font-size: 1rem;
+    }
+
+    #banner .content img {
+        width: 80%;
+        height: auto;
+    }
 }
