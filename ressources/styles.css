@@ -120,9 +120,9 @@ form {
 }
 
 .description h1 {
-    font-size: 4rem;
+    font-size: 5rem;
     margin-bottom: 1rem;
-    text-shadow: 0.15rem 0.15rem 0px #ed667c;
+    text-shadow: 0.25rem 0.25rem 0px #ed667c;
     letter-spacing: 0.1rem;
 }
 
@@ -267,7 +267,12 @@ footer .content {
     align-items: start;
     color: white;
 }
-
+#formresponse{
+    background-color: white;
+    border-radius: 10px;
+    padding:40px;
+    font-size: 0.75rem;text-align: center;display:none
+}
 
 @media only screen and (max-width:468px) {
 
