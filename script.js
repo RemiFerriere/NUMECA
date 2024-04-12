@@ -1,3 +1,20 @@
+/*Ajouter un astérisque aux champs obligatoires*/
+
+document.addEventListener('DOMContentLoaded', function() {
+    const formLabels = document.querySelectorAll('label');
+    formLabels.forEach(label => {
+        const inputId = label.getAttribute('for');
+        if (inputId) {
+            const inputElement = document.getElementById(inputId);
+            if (inputElement && inputElement.hasAttribute('required')) {
+                label.innerHTML += '<span style="color: black;"> *</span>';
+            }
+        }
+    });
+});
+
+
+/*Changer le titre au clic*/
 const myHeading = document.getElementById('title');
 
 function changeText(event){
@@ -6,6 +23,9 @@ function changeText(event){
 }
 
 myHeading.addEventListener('click',changeText)
+
+
+/*Envoi un mail*/
 
 document.getElementById('myDIV').addEventListener('submit', function(event) {
     event.preventDefault(); // Empêcher le formulaire de se soumettre normalement
@@ -48,6 +68,8 @@ fetch('https://prod-193.westeurope.logic.azure.com:443/workflows/ab9be6bb822f4cd
 });
 
 });
+
+/*Vérifier l'adresse mail*/
 
 const emailInput = document.getElementById('emailInput');
 const emailError = document.getElementById('emailError');
