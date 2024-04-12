@@ -1,3 +1,5 @@
+/*Général*/
+
 * {
     margin: 0;
     box-sizing: border-box;
@@ -9,57 +11,51 @@ body {
     font-family: Arial, sans-serif;
 }
 
-#features {
-    background-color: lightgray;
-    width: 100%;
-    padding: 20px 0;
-
-}
-
 .content {
-    max-width: 80%;
+    max-width: 70%;
     margin: 0 auto;
     color: white;
-    padding: 2rem 0px;
+    padding: 1rem 0px;
 }
 
-
-#banner .content {
-    display: grid;
-    grid-template-areas:
-        "img description";
-    grid-template-columns: 1fr 2fr;
-    align-items: center;
-    gap: 20px;
+#container {
+    position: relative;
+    top: 80px;
 }
 
-#banner .content img {
-
-
-    grid-area: "img";
-    height: 50rem;
-    width: auto;
-}
-
-#banner .content .description {
-
+h2 {
+    margin: 20px 0px;
+    font-size: 2rem;
     color: black;
-    grid-area: "description";
 }
+
+.description p,
+p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+/*Nav*/
 
 nav {
     background-color: white;
     height: 80px;
     position: fixed;
     width: 100%;
-    z-index: 1;
+    z-index: 4;
     display: block;
     align-content: center;
     border-bottom: 1px solid #e20025
 }
 
-nav .content {
+nav #logo {
+    font-size: 2rem;
+    color: #e20025;
+    font-weight: bold;
+}
 
+nav .content {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -76,8 +72,8 @@ li {
     padding-right: 10px;
 }
 
-a {
-border-radius: 10px;
+nav a {
+    border-radius: 10px;
     color: #e20025;
     text-decoration: none;
     font-size: 1.2rem;
@@ -86,20 +82,23 @@ border-radius: 10px;
     transition: 0.25s ease;
 }
 
-nav #logo {
-    font-size: 2rem;
-    color: #e20025;
-    font-weight: bold;
+a:hover {
+    background-color: #e22025;
+    border-radius: 10px;
+    color: white;
 }
 
-#container {
-    position: relative;
-    top: 80px;
+#menu {
+    display: none;
 }
+
+/*Presentation*/
 
 #presentation {
     background-color: #e20025;
+    margin-bottom: 1rem;
     padding: 40px 0px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 #presentation .content {
@@ -108,7 +107,15 @@ nav #logo {
         "content form";
     grid-template-columns: 2fr 1fr;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
+}
+
+.description h1 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    text-shadow: 0.25rem 0.25rem 0px #f6b2bd;
+
+    letter-spacing: 0.1rem;
 }
 
 form {
@@ -119,13 +126,7 @@ form {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-}
-
-.description h1 {
-    font-size: 5rem;
-    margin-bottom: 1rem;
-    text-shadow: 0.25rem 0.25rem 0px #ed667c;
-    letter-spacing: 0.1rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 .form_line {
@@ -149,17 +150,15 @@ input {
     font-weight: 1.2rem;
 }
 
-a:hover {
-    background-color: #e22025;
-    border-radius: 10px;
-    color: white;
-}
+
 
 form p {
     margin-bottom: 20px;
     font-weight: bold;
     font-size: 1.5rem;
 }
+
+
 
 #submit {
     margin-top: 20px;
@@ -171,10 +170,58 @@ form p {
     border-radius: 10px;
     border: none;
     transition: 0.2s ease;
+
 }
 
 #submit:hover {
     background-color: #ed667c;
+
+}
+
+#formresponse {
+    background-color: white;
+    border-radius: 10px;
+    padding: 40px;
+    font-size: 0.75rem;
+    text-align: center;
+    display: none
+}
+
+/*Banner*/
+#banner .content {
+    display: grid;
+    grid-template-areas:
+        "img description";
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    gap: 20px;
+}
+
+#banner .content #phone {
+    grid-area: "img";
+    height: 50rem;
+    width: auto;
+}
+
+#banner .content .description {
+    color: black;
+    grid-area: "description";
+}
+
+#apple {
+    margin-top: 1rem;
+    width: auto;
+    height: 70px
+}
+
+
+
+/*Features*/
+
+#features {
+    background-color: lightgray;
+    width: 100%;
+    padding: 20px 0;
 
 }
 
@@ -188,16 +235,13 @@ form p {
 .item {
     display: flex;
     flex-direction: column;
-
-
     justify-content: end;
     min-height: 20rem;
     transition: transform 0.3s ease;
 }
 
-img {
-    width: 100%;
-    height: auto;
+.item:hover {
+    transform: scale(1.1)
 }
 
 #rapports {
@@ -205,10 +249,6 @@ img {
     background-repeat: no-repeat;
     background-size: cover;
 
-}
-
-.item:hover {
-    transform: scale(1.1)
 }
 
 #carnet {
@@ -240,17 +280,13 @@ h3 {
     padding: 16px;
 }
 
-h2 {
-    margin: 20px 0px;
-    font-size: 2rem;
-    color: black;
-}
 
-.description p,
-p {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
+
+
+
+
+
+/*Footer*/
 
 footer {
     background-color: #e20025;
@@ -258,35 +294,43 @@ footer {
 
 }
 
-footer h2 {
-    color: white;
-}
-
-footer h3 {
-    font-size: 1.2rem;
-    padding-bottom: 0.5rem;
-}
-
-footer p {
-    padding: 0px;
-    margin: 0px
-}
-
 footer .content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: start;
     color: white;
+    min-height: 15rem;
+    padding-top: 2rem;
 }
 
-#formresponse {
-    background-color: white;
-    border-radius: 10px;
-    padding: 40px;
-    font-size: 0.75rem;
-    text-align: center;
-    display: none
+footer h2 {
+    color: white;
+    margin: 0;
 }
+
+footer h3 {
+    font-size: 1.2rem;
+    padding: 0 0 0.5rem 0;
+    margin: 0;
+}
+
+footer p {
+    padding: 0px;
+    margin: 0px;
+    font-size: 1.2rem;
+}
+
+footer #contact div {
+
+    margin-top: 4rem;
+    font-size: 1.2rem;
+}
+
+footer a {
+    color: white;
+}
+
+
 
 @media only screen and (max-width:468px) {
 
@@ -296,7 +340,7 @@ footer .content {
     footer .content {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 30px;
 
         justify-content: center;
     }
@@ -309,8 +353,6 @@ footer .content {
         width: 100%;
         max-width: 100%;
         padding: 30px;
-
-
     }
 
     footer {
@@ -337,5 +379,37 @@ footer .content {
     #banner .content img {
         width: 80%;
         height: auto;
+    }
+
+    .description p,
+    p {
+        text-align: left;
+    }
+
+    #banner #apple {
+        margin-top: 1rem;
+        width: auto;
+        height: 70px
+    }
+
+    /*Menu*/
+    #menu {
+        display: block;
+        z-index: 5;
+        height: 2rem;
+        width: auto
+    }
+
+    body {
+        background-color: #e20025;
+    }
+
+    #banner {
+        background-color: white;
+    }
+
+    #presentation {
+        z-index: 3;
+        box-shadow: none
     }
 }
